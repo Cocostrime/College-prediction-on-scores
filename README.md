@@ -51,9 +51,9 @@ GMAT Prediction
 1. Clone the repo
  
    git clone https://github.com/yourusername/College-prediction-on-scores.git
-   cd admit-ai
+   cd College-prediction-on-scores
 
-2. Create virtual environment
+3. Create virtual environment
 
 python -m venv venv
 source venv/bin/activate   # or venv\Scripts\activate on Windows
