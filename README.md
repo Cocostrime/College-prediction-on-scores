@@ -24,20 +24,6 @@ Admission Form with:
 🔢 ML model prediction (XGBoost/Linear Regression or similar)
 💬 Borderline cases display multiple suggestions
 
-
-
- 📁 Project Structure
-
-College-prediction-on-scores/
-├── app.py                     # Flask backend
-├── templates/
-│   ├── form_gmat.html             # GMAT form
-│   ├── form_gre.html             # GRE form
-│   ├── select_test.html        #Selecting the test
-│   ├── result.html            # Result display
-└── README.md
-
-
 📈 Input Fields
 
  GRE Prediction
@@ -64,7 +50,7 @@ GMAT Prediction
 
 1. Clone the repo
  
-   git clone https://github.com/yourusername/admit-ai.git
+   git clone https://github.com/yourusername/College-prediction-on-scores.git
    cd admit-ai
 
 2. Create virtual environment
