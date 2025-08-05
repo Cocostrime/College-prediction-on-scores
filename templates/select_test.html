@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Test - AdmitAi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background: #fdfdfd;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+      max-width: 500px;
+      margin-top: 100px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+    h2 {
+      color: #0077b6;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .btn-choice {
+      width: 100%;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      padding: 12px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Choose Your Test</h2>
+    <form action="/form" method="post">
+      <button type="submit" name="test" value="gre" class="btn btn-primary btn-choice">🎓 GRE</button>
+      <button type="submit" name="test" value="gmat" class="btn btn-success btn-choice">💼 GMAT</button>
+    </form>
+  </div>
+</body>
+</html>

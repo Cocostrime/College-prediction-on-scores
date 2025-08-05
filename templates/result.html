@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admit Ai - Your Prediction</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to right, #f3f9ff, #e0f7ff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #ffffffcc;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 30px rgba(0, 180, 255, 0.3);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(0, 180, 255, 0.3);
+    }
+
+    h2, h4, h5 {
+      text-align: center;
+      color: #0088cc;
+      font-weight: 600;
+    }
+
+    .chance-bar {
+      width: 100%;
+      height: 40px;
+      background-color: #e6f7ff;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 20px 0;
+      border: 1px solid #b3e5fc;
+    }
+
+    .chance-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      text-align: center;
+      line-height: 40px;
+      font-weight: bold;
+      color: #fff;
+      transition: width 1.5s ease-in-out;
+      box-shadow: 0 0 10px rgba(0, 183, 255, 0.6);
+    }
+
+    .btn-custom {
+      background-color: #00c6ff;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #0072ff;
+      color: #fff;
+    }
+
+    .list-group-item {
+      background-color: #f9f9f9;
+      border: 1px solid #b2ebf2;
+      color: #007ba7;
+      font-weight: 500;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      text-align: center;
+      color: #007ba7;
+    }
+  </style>
+
+  <script>
+    // Animate chance bar after page loads
+    document.addEventListener("DOMContentLoaded", () => {
+      const fill = document.getElementById("chanceFill");
+      const chance = parseInt(fill.innerText);
+      fill.style.width = chance + "%";
+    });
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <h2>🚀 Admit Ai: Admission Prediction</h2>
+
+  <div class="chance-bar">
+    <div class="chance-fill" id="chanceFill">{{ chance }}%</div>
+  </div>
+
+  <a href="/" class="btn btn-custom mt-3">🔁 Try Another Prediction</a>
+
+  <h4 class="mt-5">🎓 Suggested Colleges Based on Your Profile</h4>
+  <ul class="list-group mt-3">
+    {% for college in colleges %}
+      <li class="list-group-item">{{ college }}</li>
+    {% endfor %}
+  </ul>
+
+  <div class="message">
+    <h5>{{ message }}</h5>
+  </div>
+</div>
+
+</body>
+</html>
